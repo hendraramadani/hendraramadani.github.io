@@ -176,8 +176,6 @@ strong {
 .hero {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
-  column-gap: 48px;
   align-items: center;
   min-height: 88svh;
   padding: 132px 6vw 56px;
@@ -206,63 +204,32 @@ strong {
   max-width: 760px;
 }
 
-.hero-profile-card {
-  position: relative;
-  z-index: 1;
-  justify-self: end;
-  display: grid;
-  gap: 18px;
-  width: min(330px, 100%);
-  margin: 0 0 0 auto;
-  padding: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.34);
+.hero-avatar-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 100%;
+  margin: 0 0 18px;
+  padding: 6px 10px 6px 6px;
+  border: 1px solid rgba(255, 255, 255, 0.26);
   border-radius: 8px;
-  background: rgba(16, 22, 36, 0.52);
-  backdrop-filter: blur(18px);
-  box-shadow: var(--shadow);
+  background: rgba(16, 22, 36, 0.42);
+  backdrop-filter: blur(14px);
 }
 
-.hero-profile-card::after {
-  position: absolute;
-  inset: 0;
-  content: "";
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: inherit;
-  pointer-events: none;
-}
-
-.hero-profile-image {
-  overflow: hidden;
-  border-radius: 6px;
-  background: #e8f2f1;
-}
-
-.hero-profile-image img {
-  width: 100%;
-  aspect-ratio: 4 / 5;
+.hero-avatar-card img {
+  width: 52px;
+  aspect-ratio: 1;
   height: auto;
+  border-radius: 8px;
   object-fit: cover;
   object-position: center 14%;
 }
 
-.hero-profile-meta {
-  display: grid;
-  gap: 4px;
-  padding: 0 2px 2px;
-}
-
-.hero-profile-meta span {
-  color: var(--white);
-  font-size: 1.12rem;
-  font-weight: 850;
-}
-
-.hero-profile-meta p {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 0.92rem;
-  font-weight: 650;
-  line-height: 1.45;
+.hero-avatar-card span {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.88rem;
+  font-weight: 800;
 }
 
 .eyebrow,
@@ -362,7 +329,6 @@ strong {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-column: 1 / -1;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-self: end;
   width: min(720px, 100%);
@@ -443,12 +409,12 @@ section[id] {
 
 .profile-summary-card {
   display: grid;
-  grid-template-columns: 110px minmax(0, 1fr);
-  gap: 18px;
+  grid-template-columns: 76px minmax(0, 1fr);
+  gap: 14px;
   align-items: center;
-  max-width: 430px;
+  max-width: 360px;
   margin: 28px 0 0;
-  padding: 14px;
+  padding: 12px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--white);
@@ -456,7 +422,7 @@ section[id] {
 }
 
 .profile-summary-card img {
-  width: 110px;
+  width: 76px;
   aspect-ratio: 1;
   height: auto;
   border-radius: 8px;
@@ -783,16 +749,9 @@ section[id] {
   }
 
   .hero {
-    grid-template-columns: minmax(0, 1fr);
     min-height: 86svh;
     padding-top: 118px;
     background-position: 62% center;
-  }
-
-  .hero-profile-card {
-    justify-self: start;
-    width: min(280px, 72vw);
-    margin-top: 30px;
   }
 
   .hero h1 {
@@ -825,7 +784,6 @@ section[id] {
   }
 
   .hero {
-    grid-template-columns: minmax(0, 1fr);
     min-height: 84svh;
     padding: 108px 20px 38px;
     background:
@@ -845,10 +803,12 @@ section[id] {
     width: 100%;
   }
 
-  .hero-profile-card {
-    width: 100%;
-    max-width: 260px;
-    margin-top: 24px;
+  .hero-avatar-card {
+    margin-bottom: 18px;
+  }
+
+  .hero-avatar-card img {
+    width: 48px;
   }
 
   .hero-panel {
@@ -907,12 +867,12 @@ section[id] {
   }
 
   .profile-summary-card {
-    grid-template-columns: 88px minmax(0, 1fr);
+    grid-template-columns: 64px minmax(0, 1fr);
     padding: 12px;
   }
 
   .profile-summary-card img {
-    width: 88px;
+    width: 64px;
   }
 
   .project-card::before {
