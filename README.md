@@ -52,4 +52,6 @@ GitHub akan memberi URL Pages untuk repository tersebut.
 - `index.html` untuk struktur konten.
 - `styles.css` untuk desain responsif.
 - `script.js` untuk menu mobile dan animasi ringan.
-- `assets/hero-workspace.png` untuk aset visual hero.
+- `assets/hendra-ramadani-cutout.png` untuk foto hero.
+- `assets/hendra-ramadani-portrait.jpg` untuk foto profil.
+- `assets/hero-workspace.png` untuk preview sosial.
