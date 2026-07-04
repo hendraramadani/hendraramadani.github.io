@@ -412,6 +412,44 @@ section[id] {
   align-items: start;
 }
 
+.profile-summary-card {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+  max-width: 430px;
+  margin: 28px 0 0;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0 14px 40px rgba(16, 22, 36, 0.06);
+}
+
+.profile-summary-card img {
+  width: 110px;
+  aspect-ratio: 1;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center 18%;
+}
+
+.profile-summary-card figcaption {
+  display: grid;
+  gap: 4px;
+}
+
+.profile-summary-card strong {
+  color: var(--ink);
+  font-size: 1.05rem;
+}
+
+.profile-summary-card span {
+  color: var(--ink-muted);
+  font-weight: 700;
+}
+
 .section h2,
 .contact-section h2 {
   margin: 10px 0 0;
@@ -738,6 +776,10 @@ section[id] {
     gap: 34px;
   }
 
+  .profile-summary-card {
+    max-width: 100%;
+  }
+
   .skills-grid,
   .projects-grid {
     grid-template-columns: 1fr;
@@ -832,6 +874,15 @@ section[id] {
   .timeline-item,
   .contact-card {
     padding: 22px;
+  }
+
+  .profile-summary-card {
+    grid-template-columns: 88px minmax(0, 1fr);
+    padding: 12px;
+  }
+
+  .profile-summary-card img {
+    width: 88px;
   }
 
   .project-card::before {
